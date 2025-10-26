@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Messenger Like Lync</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Lync Chat</h2>
+    <div class="contact-list">
+      <div class="contact active" data-name="Riya">Riya</div>
+      <div class="contact" data-name="Aryan">Aryan</div>
+      <div class="contact" data-name="John">John</div>
+    </div>
+  </div>
+
+  <div class="chat">
+    <div class="chat-header">
+      <div class="chat-with">Chat with Riya</div>
+      <div>
+        <button onclick="startCall('audio')">📞</button>
+        <button onclick="startCall('video')">🎥</button>
+      </div>
+    </div>
+
+    <div class="chat-body" id="chatBody">
+      <div class="message them">Hi there!</div>
+      <div class="message me">Hi Riya!</div>
+    </div>
+
+    <div class="chat-input">
+      <input id="msgInput" placeholder="Type a message..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <div class="call-popup" id="callPopup">
+    <div class="call-box">
+      <h3 id="callTitle">Calling...</h3>
+      <button class="mute" onclick="toggleMute()">Mute</button>
+      <button class="end" onclick="endCall()">End</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
